@@ -4,13 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>صفحه اصلی فروشگاه</title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/69332f68da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/bootstrap-rtl.min.css">
+    <style>
+        .dropdown-menu{
+            right: -125px !important;
+        }
+        .dropdown-item{
+            width: 200px;
+            height: 55px;
+        }
+        .dropdown-item:active{
+            color: black;
+            background-color: #e9ecef;
+        }
+    </style>
 </head>
-<body>
-    <div>
-        <nav>
-        
-        </nav>
-    </div>
+<body class="rtl">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <div class="container-fluid row">
+          <ul class="navbar-nav col-3">
+            <li class="nav-item bg-dark">
+              <a class="nav-link bg-dark " href="#">
+                <i class="fa-solid fa-list text-white"></i>
+              </a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">
+                <i class="fa fa-search"></i>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-nav col-6 text-center p-0">
+            <p class="m-auto">
+                <a class="text-black text-decoration-none" href="#">لوگو سایت</a>
+            </p>
+          </div>
+          <div class="navbar-nav col-3 d-flex justify-content-end">
+                <a class="nav-link nav-item mr-3 my-auto" href="#">
+                    سبد خرید : 0
+                </a>
+                <div class="dropdown">
+                    <div class="btn dropdown-toggle border-0" id="dropdownMenuButton" data-toggle="dropdown">
+                        <i class="fa-solid fa-2x fa-circle-user"></i>
+                    </div>
+                    <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
+                        <i class="fa fa-circle-user px-2"></i>مشخصات کاربری
+                      </a>
+                      <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
+                        <i class="fa-regular fa-heart px-2"></i>لیست علاقه‌مندی‌ها
+                      </a>
+                      <a class="dropdown-item p-0 d-flex align-items-center" href="#">
+                        <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>خروج از حساب کاربری
+                      </a>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </nav>
+
+      <script src="js/popper.min.js"></script>
+      <script src="Js/jquery-3.2.1.slim.min.js"></script>
+      <script src="Js/bootstrap.min.js"></script>
 </body>
 </html>
