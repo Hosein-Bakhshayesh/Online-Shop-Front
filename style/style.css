@@ -1,0 +1,31 @@
+font-face {
+	font-family: VazirWeb;
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/eot/Vazir-Bold.eot');
+	src: url('fonts/eot/Vazir-Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */ url('fonts/woff2/Vazir-Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/Vazir-Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/Vazir-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: VazirWeb;
+	font-style: normal;
+	font-weight: lighter;
+	src: url('fonts/eot/Vazir-Light.eot');
+	src: url('fonts/eot/Vazir-Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */ url('fonts/woff2/Vazir-Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/Vazir-Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/Vazir-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: VazirWeb;
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/eot/Vazir.eot');
+	src: url('fonts/eot/Vazir.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */ url('fonts/woff2/Vazir.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/Vazir.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/Vazir.ttf') format('truetype');
+}
+@font-face {
+	font-family: YekanWeb;
+	src: url('fonts/eot/Yekan.eot');
+	src: url('fonts/woff/Yekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/Yekan.ttf') format('truetype');
+}
+body{
+    font-family: VazirWeb;
+    font-weight: bold;
+	font-size: large;
+}
