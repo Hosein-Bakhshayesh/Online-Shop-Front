@@ -1,551 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحه اصلی فروشگاه</title>
-    <link rel="stylesheet" href="style/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/69332f68da.js" crossorigin="anonymous"></script>
-    <script src="Js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style/bootstrap-rtl.min.css">
-    <link rel="stylesheet" href="style/style.css">
-    <style>
-        .dropdown-menu{
-            right: -150px !important;
-        }
-        .dropdown-item{
-            width: 220px;
-            height: 55px;
-        }
-        .dropdown-item:active{
-            color: black;
-            background-color: #e9ecef;
-        }
-        .slider{
-          height: 500px;
-          margin-top: 100px !important;
-        }
-        .my-nav-style{
-          box-sizing: border-box !important;
-          box-shadow: 5px 7px 7px rgba(187, 187, 187, 0.651);
-          position:fixed;
-          z-index: 10;
-          height: 70px;
-          width: 100%;
-          top: 0 !important;
-        }
-        .carousel-item{
-          height: 500px;
-        }
-        .test{
-          height: 2000px;
-        }
-        .logo-place
-        {
-          font-weight: bold !important;
-        }
-        .categories{
-          margin-top: 40px;
-          margin-bottom: 40px;
-          padding: 0 !important;
-        }
-        .categories-row{
-          margin: 35px 0px !important;
-        }
-        .categories-items{
-          width: 50%;
-          box-sizing: border-box;
-          padding-top: 15px;
-          padding-bottom: 0px;
-          border-radius: 70px;
-          transition-duration: .3s;
-        }
-        .categories-items:hover{
-          background-color: #e9ecef;
-        }
-        .product-box{
-          height: 300px;
-          border: 1px solid #e9ecef;
-          box-sizing: border-box;
-          box-shadow: 0px 10px 7px #e9ecef;
-          transition-duration: .3s;
-        }
-        .product-box:hover{
-          scale: 1.1;
-        }
-        .product-title{
-          transition-duration: .3s;
-          font-family: YekanWeb !important;
-          font-weight: 700 !important;
-          font-size: 16px !important;
-          line-height: 1.3rem !important;
-          text-align: justify !important;
-        }
-        .product-title:hover{
-          color: rgb(0, 89, 161) !important;
-        }
-        .off-items{
-          height: 250px;
-          border-radius: 20px;
-        }
-        .footer{
-          height: 300px;
-          background-color: #eee;
-        }
-        .footer-item{
-          transition-duration: .3s;
-          color: gray !important;
-        }
-        .footer-item:hover{
-          color: black !important;
-        }
-        #off-email:focus{
-          border-color: #e9ecef !important;
-          box-shadow: 0 0 2px 0.1rem gray !important;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه اصلی فروشگاه</title>
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/69332f68da.js" crossorigin="anonymous"></script>
+  <script src="Js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style/bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+    .dropdown-menu {
+      right: -150px !important;
+    }
+
+    .dropdown-item {
+      width: 220px;
+      height: 55px;
+    }
+
+    .dropdown-item:active {
+      color: black;
+      background-color: #e9ecef;
+    }
+
+    .slider {
+      height: 500px;
+      margin-top: 100px !important;
+    }
+
+    .my-nav-style {
+      box-sizing: border-box !important;
+      box-shadow: 5px 7px 7px rgba(187, 187, 187, 0.651);
+      position: fixed;
+      z-index: 10;
+      height: 70px;
+      width: 100%;
+      top: 0 !important;
+    }
+
+    .carousel-item {
+      height: 500px;
+    }
+
+    .test {
+      height: 2000px;
+    }
+
+    .logo-place {
+      font-weight: bold !important;
+    }
+
+    .categories {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      padding: 0 !important;
+    }
+
+    .categories-row {
+      margin: 35px 0px !important;
+    }
+
+    .categories-items {
+      width: 50%;
+      box-sizing: border-box;
+      padding-top: 15px;
+      padding-bottom: 0px;
+      border-radius: 70px;
+      transition-duration: .3s;
+    }
+
+    .categories-items:hover {
+      background-color: #e9ecef;
+    }
+
+    .product-box {
+      height: 300px;
+      border: 1px solid #e9ecef;
+      box-sizing: border-box;
+      box-shadow: 0px 10px 7px #e9ecef;
+      transition-duration: .3s;
+    }
+
+    .product-box:hover {
+      scale: 1.1;
+    }
+
+    .product-title {
+      transition-duration: .3s;
+      font-family: YekanWeb !important;
+      font-weight: 700 !important;
+      font-size: 16px !important;
+      line-height: 1.3rem !important;
+      text-align: justify !important;
+    }
+
+    .product-title:hover {
+      color: rgb(0, 89, 161) !important;
+    }
+
+    .off-items {
+      height: 250px;
+      border-radius: 20px;
+    }
+
+    .footer {
+      height: 300px;
+      background-color: #eee;
+    }
+
+    .footer-item {
+      transition-duration: .3s;
+      color: gray !important;
+    }
+
+    .footer-item:hover {
+      color: black !important;
+    }
+
+    #off-email:focus {
+      border-color: #e9ecef !important;
+      box-shadow: 0 0 2px 0.1rem gray !important;
+    }
+
+    /* Dropdown Button */
+    .dropbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #e9ecef;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content-digital{
+      display: none;
+      position: absolute;
+      background-color: #d8d5d5;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+      margin-right: 6rem !important;
+    }
+    .dropdown-content-digital a{
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content-digital a:hover {
+      background-color: #e9ecef;
+    }
+    .myDropdown-items-digital:hover .dropdown-content-digital{
+      display: block !important;
+    }
+  </style>
 </head>
+
 <body class="rtl">
-    <header>
-      <nav class="navbar navbar-expand-sm bg-light navbar-light my-nav-style p-0">
-        <div class="container-fluid row">
-          <ul class="navbar-nav col-3">
-            <li class="nav-item bg-dark">
-              <a class="nav-link bg-dark " href="#">
-                <i class="fa-solid fa-list text-white"></i>
+  <header>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light my-nav-style p-0">
+      <div class="container-fluid row">
+        <ul class="navbar-nav col-3">
+          <li class="nav-item bg-dark">
+            <div class="dropdown">
+              <button class="dropbtn text-white bg-danger">
+                <i class="fa fa-list"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#" class="myDropdown-items-digital">کالای دیجیتال
+                  <div class="dropdown-content-digital">
+                    <a href="#">تلفن همراه</a>
+                    <a href="#">لپتاپ</a>
+                    <a href="#">تبلت</a>
+                    <a href="#">کنسول بازی</a>
+                    <a href="#">تلویزیون</a>
+                  </div>
+                </a>
+                <a href="#" class="myDropdown-items-house">خانه و آشپزخانه</a>
+                <a href="#" class="myDropdown-items-beauty">زیبایی و سلامت</a>
+                <a href="#" class="myDropdown-items-cloth">مد و پوشاک</a>
+                <a href="#" class="myDropdown-items-book">کتاب و نوشت افزار</a>
+              </div>
+              
+            </div>
+          </li>
+          <li class="nav-item mx-4">
+            <a class="nav-link mt-2" href="#">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="navbar-nav col-6 text-center p-0">
+          <p class="m-auto">
+            <a class="text-black text-decoration-none logo-place" href="#">لوگو سایت</a>
+          </p>
+        </div>
+        <div class="navbar-nav col-3 d-flex justify-content-end">
+          <a class="nav-link nav-item mr-3 my-auto" href="#">
+            سبد خرید : 0
+          </a>
+          <div class="dropdown">
+            <div class="btn dropdown-toggle border-0" id="dropdownMenuButton" data-toggle="dropdown">
+              <i class="fa-solid fa-2x fa-circle-user"></i>
+            </div>
+            <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
+                <i class="fa fa-circle-user px-2"></i>مشخصات کاربری
               </a>
+              <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
+                <i class="fa-regular fa-heart px-2"></i>لیست علاقه‌مندی‌ها
+              </a>
+              <a class="dropdown-item p-0 d-flex align-items-center" href="#">
+                <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>خروج از حساب کاربری
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container row slider mx-auto mt-4 p-0">
+      <div class="col-4 h-100 row m-0 p-0">
+        <div class="h-50 bg-danger m-0 p-0">
+
+        </div>
+        <div class="h-50 bg-success m-0 p-0">
+
+        </div>
+      </div>
+      <div class="col-8 h-100 m-0 p-0">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item bg-info active">
+              <!-- image here -->
+            </div>
+            <div class="carousel-item bg-warning">
+              <!-- image here -->
+            </div>
+            <div class="carousel-item bg-dark">
+              <!-- image here -->
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+  </header>
+  <section class="container categories">
+    <div class="border border-2 border-dark rounded rounded-pill d-inline py-2 px-5">
+      <a href="#" class="text-black text-decoration-none">
+        <span class="fw-bold">دسته‌بندی‌ کالاها</span>
+      </a>
+    </div>
+    <div class="categories-list my-5">
+      <div class="row text-center categories-row">
+        <div class="col-3 categories-items">
+          <a href="#" class="m-auto text-black text-decoration-none">
+            <i class="fa fa-laptop fa-2x"></i>
+            <p class="my-3">کالای دیجیتال</p>
+          </a>
+        </div>
+        <div class="col-3 categories-items">
+          <a href="#" class="text-black text-decoration-none">
+            <i class="fa fa-mobile fa-2x"></i>
+            <p class="my-3">موبایل</p>
+          </a>
+        </div>
+        <div class="col-3 categories-items">
+          <a href="#" class="text-black text-decoration-none">
+            <i class="fa fa-shirt fa-2x"></i>
+            <p class="my-3">پوشاک</p>
+          </a>
+        </div>
+        <div class="col-3 categories-items">
+          <a href="#" class="text-black text-decoration-none">
+            <i class="fa fa-book fa-2x"></i>
+            <p class="my-3">کتاب</p>
+          </a>
+        </div>
+      </div>
+      <div class="row text-center categories-row">
+        <div class="col-3 categories-items">
+          <a href="#" class="text-black text-decoration-none">
+            <i class="fa fa-ring fa-2x"></i>
+            <p class="my-3">اکسسوری</p>
+          </a>
+        </div>
+        <div class="col-3 categories-items">
+          <a href="#" class="text-black text-decoration-none">
+            <i class="fa fa-gamepad fa-2x"></i>
+            <p class="my-3">کنسول</p>
+          </a>
+        </div>
+        <div class="col-3 categories-items">
+          <a href="#" class="text-black text-decoration-none">
+            <i class="fa-solid fa-wand-magic-sparkles fa-2x"></i>
+            <p class="my-3">زیبایی و سلامت</p>
+          </a>
+        </div>
+        <div class="col-3 categories-items">
+          <a href="#" class="text-black text-decoration-none">
+            <i class="fa fa-house fa-2x"></i>
+            <p class="my-3">لوازم خانگی</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main>
+    <div class="container">
+      <div class="mt-2 mb-5">
+        <div class="border border-2 border-dark rounded rounded-pill d-inline py-2 px-5">
+          <a href="#" class="text-black text-decoration-none">
+            <span class="fw-bold">جدیدترین محصولات</span>
+          </a>
+        </div>
+      </div>
+      <div class="row m-auto p-0 justify-content-around">
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+      </div>
+
+      <div class="row container m-auto p-0 justify-content-around">
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+      </div>
+
+      <div class="off-section">
+        <div class="row my-3">
+          <a href="#" class="col-6 text-center text-black text-decoration-none p-0">
+            <div class="off-items border border-4 m-3 bg-danger">
+              تصویر اول
+            </div>
+          </a>
+          <a href="#" class="col-6 text-center text-black text-decoration-none p-0">
+            <div class="off-items border border-4 m-3 bg-success">
+              تصویر دوم
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-5 mb-5">
+        <div class="border border-2 border-dark rounded rounded-pill d-inline py-2 px-5">
+          <a href="#" class="text-black text-decoration-none">
+            <span class="fw-bold">محصولات پرفروش</span>
+          </a>
+        </div>
+      </div>
+      <div class="row m-auto p-0 justify-content-around">
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+      </div>
+
+      <div class="row container m-auto p-0 justify-content-around">
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+        <div class="col-2 product-box p-0 mx-2 my-2">
+          <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
+            عکس محصول
+          </a>
+          <div class="w-100 text-center mt-2 h-25"><a href="#"
+              class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung
+              galexy S6 2022</a></div>
+          <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
+            2,500,000 تومان
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container mt-5">
+      <div class="m-auto row">
+        <div class="col-3 h-100 mt-5">
+          <a href="#" class="text-dark text-decoration-none fw-bolder d-block mb-3">سایت فروشگاه من</a>
+          <ul>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">درباره ما</a>
             </li>
-            <li class="nav-item mx-4">
-              <a class="nav-link" href="#">
-                <i class="fa fa-search"></i>
-              </a>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">تماس با ما</a>
+            </li>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">ثبت نام فروشنده</a>
             </li>
           </ul>
-          <div class="navbar-nav col-6 text-center p-0">
-            <p class="m-auto">
-                <a class="text-black text-decoration-none logo-place" href="#">لوگو سایت</a>
-            </p>
-          </div>
-          <div class="navbar-nav col-3 d-flex justify-content-end">
-                <a class="nav-link nav-item mr-3 my-auto" href="#">
-                    سبد خرید : 0
-                </a>
-                <div class="dropdown">
-                    <div class="btn dropdown-toggle border-0" id="dropdownMenuButton" data-toggle="dropdown">
-                        <i class="fa-solid fa-2x fa-circle-user"></i>
-                    </div>
-                    <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
-                        <i class="fa fa-circle-user px-2"></i>مشخصات کاربری
-                      </a>
-                      <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
-                        <i class="fa-regular fa-heart px-2"></i>لیست علاقه‌مندی‌ها
-                      </a>
-                      <a class="dropdown-item p-0 d-flex align-items-center" href="#">
-                        <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>خروج از حساب کاربری
-                      </a>
-                    </div>
-                  </div>
-          </div>
         </div>
-      </nav>
-      <div class="container row slider mx-auto mt-4 p-0">
-        <div class="col-4 h-100 row m-0 p-0">
-          <div class="h-50 bg-danger m-0 p-0">
-
-          </div>
-          <div class="h-50 bg-success m-0 p-0">
-
-          </div>
+        <div class="col-4 h-100 mt-5">
+          <a href="#" class="text-dark text-decoration-none fw-bolder d-block mb-3">خدمات مشتریان</a>
+          <ul>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">نحوه ثبت سفارش</a>
+            </li>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">شیوه های پرداخت</a>
+            </li>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">آموزش ثبت نام به عنوان فروشنده</a>
+            </li>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">پاسخ به سوالات</a>
+            </li>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">تخفیف های امروز</a>
+            </li>
+            <li class="text-black-50 footer-item my-1">
+              <a href="#" class="footer-item text-dark text-decoration-none">تبلیغات</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-8 h-100 m-0 p-0">
-          <div id="demo" class="carousel slide" data-ride="carousel">
-            
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-              <div class="carousel-item bg-info active">
-                <!-- image here -->
-              </div>
-              <div class="carousel-item bg-warning">
-                <!-- image here -->
-              </div>
-              <div class="carousel-item bg-dark">
-                <!-- image here -->
-              </div>
+        <div class="col-5 mt-5">
+          <p class="fw-bolder d-block mb-3">ما را در فضای مجازی دنبال کنید :</p>
+          <div class="row my-4">
+            <div class="col-3 text-center">
+              <a href="#" class="footer-item text-dark text-decoration-none">
+                <i class="fa fa-2x fa-instagram"></i>
+              </a>
             </div>
-            
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
+            <div class="col-3 text-center">
+              <a href="#" class="footer-item text-dark text-decoration-none">
+                <i class="fa fa-2x fa-telegram"></i>
+              </a>
+            </div>
+            <div class="col-3 text-center">
+              <a href="#" class="footer-item text-dark text-decoration-none">
+                <i class="fa fa-2x fa-facebook"></i>
+              </a>
+            </div>
+            <div class="col-3 text-center">
+              <a href="#" class="footer-item text-dark text-decoration-none">
+                <i class="fa fa-2x fa-linkedin"></i>
+              </a>
+            </div>
           </div>
-      </div>
-    </header>
-    <section class="container categories">
-      <div class="border border-2 border-dark rounded rounded-pill d-inline py-2 px-5">
-        <a href="#" class="text-black text-decoration-none">
-          <span class="fw-bold">دسته‌بندی‌ کالاها</span>
-        </a>
-      </div>
-      <div class="categories-list my-5">
-        <div class="row text-center categories-row">
-          <div class="col-3 categories-items">
-            <a href="#" class="m-auto text-black text-decoration-none">
-              <i class="fa fa-laptop fa-2x"></i>
-              <p class="my-3">کالای دیجیتال</p>
-            </a>
-          </div>
-          <div class="col-3 categories-items">
-            <a href="#" class="text-black text-decoration-none">
-              <i class="fa fa-mobile fa-2x"></i>
-              <p class="my-3">موبایل</p>
-            </a>
-          </div>
-          <div class="col-3 categories-items">
-            <a href="#" class="text-black text-decoration-none">
-              <i class="fa fa-shirt fa-2x"></i>
-              <p class="my-3">پوشاک</p>
-            </a>
-          </div>
-          <div class="col-3 categories-items">
-            <a href="#" class="text-black text-decoration-none">
-              <i class="fa fa-book fa-2x"></i>
-              <p class="my-3">کتاب</p>
-            </a>
-          </div>
-        </div>
-        <div class="row text-center categories-row">
-          <div class="col-3 categories-items">
-            <a href="#" class="text-black text-decoration-none">
-              <i class="fa fa-ring fa-2x"></i>
-              <p class="my-3">اکسسوری</p>
-            </a>
-          </div>
-          <div class="col-3 categories-items">
-            <a href="#" class="text-black text-decoration-none">
-              <i class="fa fa-gamepad fa-2x"></i>
-              <p class="my-3">کنسول</p>
-            </a>
-          </div>
-          <div class="col-3 categories-items">
-            <a href="#" class="text-black text-decoration-none">
-              <i class="fa-solid fa-wand-magic-sparkles fa-2x"></i>
-              <p class="my-3">زیبایی و سلامت</p>
-            </a>
-          </div>
-          <div class="col-3 categories-items">
-            <a href="#" class="text-black text-decoration-none">
-              <i class="fa fa-house fa-2x"></i>
-              <p class="my-3">لوازم خانگی</p>
-            </a>
-          </div>
+          <p class="fw-bolder d-block my-3">با ثبت ایمیل از جدیدترین تخفیفات با خبر شوید :</p>
+          <form action="#" method="post" class="form-inline">
+            <input type="email" name="off-email" id="off-email" class="w-50 form-control"
+              placeholder="ایمیل خود را وارد کنید ....">
+            <button type="submit" class="btn btn-success w-25 mx-2">
+              ثبت
+            </button>
+          </form>
+
         </div>
       </div>
-    </section>
-    <main>
-      <div class="container">
-        <div class="mt-2 mb-5">
-          <div class="border border-2 border-dark rounded rounded-pill d-inline py-2 px-5">
-            <a href="#" class="text-black text-decoration-none">
-              <span class="fw-bold">جدیدترین محصولات</span>
-            </a>
-          </div>
-        </div>
-        <div class="row m-auto p-0 justify-content-around">
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#"  class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#"  class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-        </div>
+    </div>
+  </footer>
 
-        <div class="row container m-auto p-0 justify-content-around">
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#"  class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#"  class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-        </div>
-
-        <div class="off-section">
-          <div class="row my-3">
-            <a href="#" class="col-6 text-center text-black text-decoration-none p-0"><div class="off-items border border-4 m-3 bg-danger">
-              تصویر اول
-            </div></a>
-            <a href="#" class="col-6 text-center text-black text-decoration-none p-0"><div class="off-items border border-4 m-3 bg-success">
-              تصویر دوم
-            </div></a>
-          </div>
-        </div>
-
-        <div class="mt-5 mb-5">
-          <div class="border border-2 border-dark rounded rounded-pill d-inline py-2 px-5">
-            <a href="#" class="text-black text-decoration-none">
-              <span class="fw-bold">محصولات پرفروش</span>
-            </a>
-          </div>
-        </div>
-        <div class="row m-auto p-0 justify-content-around">
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#"  class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#"  class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-        </div>
-
-        <div class="row container m-auto p-0 justify-content-around">
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#"  class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#"  class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-          <div class="col-2 product-box p-0 mx-2 my-2">
-            <a href="#" class="text-center h-50 bg-info d-block text-black text-decoration-none">
-              عکس محصول
-            </a>
-            <div class="w-100 text-center mt-2 h-25"><a href="#"  class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل Sumsung galexy S6 2022</a></div>
-            <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
-              2,500,000 تومان
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="container mt-5">
-        <div class="m-auto row">
-          <div class="col-3 h-100 mt-5">
-            <a href="#" class="text-dark text-decoration-none fw-bolder d-block mb-3">سایت فروشگاه من</a>
-            <ul>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">درباره ما</a>
-              </li>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">تماس با ما</a>
-              </li>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">ثبت نام فروشنده</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-4 h-100 mt-5">
-            <a href="#" class="text-dark text-decoration-none fw-bolder d-block mb-3">خدمات مشتریان</a>
-            <ul>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">نحوه ثبت سفارش</a>
-              </li>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">شیوه های پرداخت</a>
-              </li>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">آموزش ثبت نام به عنوان فروشنده</a>
-              </li>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">پاسخ به سوالات</a>
-              </li>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">تخفیف های امروز</a>
-              </li>
-              <li class="text-black-50 footer-item my-1">
-                <a href="#" class="footer-item text-dark text-decoration-none">تبلیغات</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-5 mt-5">
-            <p class="fw-bolder d-block mb-3">ما را در فضای مجازی دنبال کنید :</p>
-            <div class="row my-4">
-              <div class="col-3 text-center">
-                <a href="#" class="footer-item text-dark text-decoration-none">
-                  <i class="fa fa-2x fa-instagram"></i>
-                </a>
-              </div>
-              <div class="col-3 text-center">
-                <a href="#" class="footer-item text-dark text-decoration-none">
-                  <i class="fa fa-2x fa-telegram"></i>
-                </a>
-              </div>
-              <div class="col-3 text-center">
-                <a href="#" class="footer-item text-dark text-decoration-none">
-                  <i class="fa fa-2x fa-facebook"></i>
-                </a>
-              </div>
-              <div class="col-3 text-center">
-                <a href="#" class="footer-item text-dark text-decoration-none">
-                  <i class="fa fa-2x fa-linkedin"></i>
-                </a>
-              </div>
-            </div>
-            <p class="fw-bolder d-block my-3">با ثبت ایمیل از جدیدترین تخفیفات با خبر شوید :</p>
-            <form action="#" method="post" class="form-inline">
-              <input type="email" name="off-email" id="off-email" class="w-50 form-control" placeholder="ایمیل خود را وارد کنید ....">
-              <button type="submit" class="btn btn-success w-25 mx-2">
-                ثبت
-              </button>
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </footer>
-
-      <script src="js/popper.min.js"></script>
-      <script src="Js/jquery-3.2.1.slim.min.js"></script>
-      <script src="Js/bootstrap.min.js"></script>
+  <script src="Js/jquery-3.2.1.slim.min.js"></script>
+  <script src="Js/bootstrap.min.js"></script>
 </body>
+
 </html>
