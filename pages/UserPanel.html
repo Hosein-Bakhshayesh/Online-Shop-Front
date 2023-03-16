@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل کاربری</title>
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/69332f68da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        .mainBox {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .panelBox {
+            position: relative;
+            margin: 100px auto;
+            width: 1000px;
+            height: 600px;
+            box-shadow: 0px 0px 10px rgba(187, 187, 187, 0.651);
+        }
+
+        .menu-title {
+            width: 100%;
+            height: 60px;
+
+        }
+
+        .menu-button {
+            background-color: transparent;
+            border: 1px solid rgba(187, 187, 187, 0.651);
+            outline: none;
+            direction: rtl;
+        }
+
+        .menu-button i {
+            font-size: 1.7rem;
+        }
+
+        .button-active {
+            width: 100%;
+            height: 60px;
+        }
+
+        .form-label {
+            font-size: 1rem;
+            color: rgb(100, 100, 100);
+        }
+
+        .input-field:focus {
+            outline: 0;
+            border: 1px solid #17a2b8;
+            box-shadow: 0 0 2px 0.1rem #17a2b8;
+        }
+
+        #wishListPanel {
+            height: 600px;
+        }
+
+        .whishList-items {
+            width: 100%;
+            height: 120px;
+            border-top: 1px solid rgba(187, 187, 187, 0.651);
+            border-bottom: 1px solid rgba(187, 187, 187, 0.651);
+        }
+
+        .p-Details {
+            margin-bottom: 15px !important;
+        }
+
+        #orderList {
+            height: 600px;
+        }
+
+        .orderItems {
+            height: 220px;
+            width: 100%;
+            border: 1px solid rgb(121, 121, 121);
+            border-radius: 10px;
+            margin-top: 5px !important;
+        }
+
+        .orderItems {
+            font-size: 1rem;
+        }
+
+        .product-details {
+            color: rgb(121, 121, 121);
+            font-size: .9rem !important;
+        }
+
+        .product-imgs {
+            height: 100px;
+            border: 1px solid rgb(121, 121, 121);
+            border-right: 0;
+            border-left: 0;
+            margin: .03rem;
+        }
+
+        .product-imgs-items {
+            width: 80px;
+            height: 80px;
+        }
+
+        #locationLists {
+            height: 600px;
+        }
+
+        .locationsList {
+            font-size: .9rem;
+            color: rgb(121, 121, 121);
+            border-bottom: 1px solid rgba(187, 187, 187, 0.651);
+        }
+
+        .locationMore-icon {
+            left: 1rem;
+            
+        }
+        .locationMore-dropdown{
+            width: 100px;
+            height: 50px;
+            border: 1px solid rgba(187, 187, 187, 0.651);
+        }
+    </style>
+</head>
+
+<body class="rtl">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light my-nav-style p-0">
+        <div class="container-fluid row">
+            <ul class="navbar-nav col-3">
+                <li class="nav-item bg-dark">
+                    <div class="dropdown">
+                        <button class="dropbtn text-white bg-danger">
+                            <i class="fa fa-list"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" class="myDropdown-items-digital">کالای دیجیتال
+                                <div class="dropdown-content-digital">
+                                    <a href="#">تلفن همراه</a>
+                                    <a href="#">لپتاپ</a>
+                                    <a href="#">تبلت</a>
+                                    <a href="#">کنسول بازی</a>
+                                    <a href="#">تلویزیون</a>
+                                </div>
+                            </a>
+                            <a href="#" class="myDropdown-items-house">خانه و آشپزخانه</a>
+                            <a href="#" class="myDropdown-items-beauty">زیبایی و سلامت</a>
+                            <a href="#" class="myDropdown-items-cloth">مد و پوشاک</a>
+                            <a href="#" class="myDropdown-items-book">کتاب و نوشت افزار</a>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link mt-2" href="#">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-nav col-6 text-center p-0">
+                <p class="m-auto">
+                    <a class="text-black text-decoration-none logo-place" href="#">لوگو سایت</a>
+                </p>
+            </div>
+            <div class="navbar-nav col-3 d-flex justify-content-end">
+                <a class="nav-link nav-item mr-3 my-auto" href="#">
+                    سبد خرید : 0
+                </a>
+                <div class="dropdown">
+                    <div class="btn dropdown-toggle border-0" id="dropdownMenuButton" data-toggle="dropdown">
+                        <i class="fa-solid fa-2x fa-circle-user"></i>
+                    </div>
+                    <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
+                            <i class="fa fa-circle-user px-2"></i>مشخصات کاربری
+                        </a>
+                        <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
+                            <i class="fa-regular fa-heart px-2"></i>لیست علاقه‌مندی‌ها
+                        </a>
+                        <a class="dropdown-item p-0 d-flex align-items-center" href="#">
+                            <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>خروج از حساب کاربری
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mainBox">
+        <div class="panelBox">
+            <div class="position-relative row p-0 m-0">
+                <div class="col-3 h-100 menu-right p-0 m-0 position-relative">
+                    <div class="menu-title bg-info">
+                        <div class="position-absolute button-active"></div>
+                        <button type="button"
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            <i class="fa fa-user-circle col-1 ml-2"></i>
+                            <span class="mx-2 col text-left">مشخصات کاربری</span>
+                        </button>
+                        <button type="button"
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            <i class="fa-regular fa-heart col-1 ml-2"></i>
+                            <span class="mx-2 col text-left">لیست علاقه‌مندی‌ها</span>
+                        </button>
+                        <button type="button"
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            <i class="fa-solid fa-bag-shopping col-1 ml-2"></i>
+                            <span class="mx-2 col text-left">سفارشات</span>
+                        </button>
+                        <button type="button"
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            <i class="fa fa-location-dot col-1 ml-2"></i>
+                            <span class="mx-2 col text-left">آدرس‌ها</span>
+                        </button>
+                        <button type="button"
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            <i class="fa-regular fa-credit-card col-1 "></i>
+                            <span class="mx-2 col text-left">کدهای‌ تخفیف</span>
+                        </button>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <div id="userInfoPanel" class="col-9 h-100 py-3 d-none">
+                    <form action="#" class="form-group p-2" method="post">
+                        <div class="row p-0 m-0">
+                            <div class="col-6">
+                                <label for="FName" class="form-label">نام :</label>
+                                <input type="text" class="input-field form-control" value="حسین" id="FName" name="FName"
+                                    placeholder="نام">
+                            </div>
+                            <div class="col-6">
+                                <label for="LName" class="form-label">نام خانوادگی :</label>
+                                <input type="text" class="input-field form-control" value="بخشایش مقرب" id="LName"
+                                    name="LName" placeholder="نام خانوادگی">
+                            </div>
+                        </div>
+                        <div class="row p-0 m-0 mt-3">
+                            <div class="col-6">
+                                <label for="userName" class="form-label">نام کاربری :</label>
+                                <input type="text" class="input-field form-control" value="hosein_bakhshayesh"
+                                    id="userName" name="userName" placeholder="نام کاربری">
+                            </div>
+                            <div class="col-6">
+                                <label for="password" class="form-label">رمز عبور :</label>
+                                <input type="password" class="input-field form-control" value="123456" id="password"
+                                    name="password" placeholder="رمز عبور">
+                            </div>
+                        </div>
+                        <div class="row p-0 m-0 mt-3">
+                            <div class="col">
+                                <label for="userEmail" class="form-label">آدرس ایمیل :</label>
+                                <input type="text" class="input-field form-control" value="hoseinb2.0181@gmail.com"
+                                    id="userEmail" name="userEmail" placeholder="ایمیل">
+                            </div>
+                        </div>
+                        <div class="row p-0 m-0 mt-3">
+                            <div class="col-6">
+                                <label for="userMobile" class="form-label">شماره موبایل :</label>
+                                <input type="text" class="input-field form-control" value="09378149896" id="userMobile"
+                                    name="userMobile" placeholder="شماره موبایل">
+                            </div>
+                            <div class="col-6">
+                                <label for="userNationalCode" class="form-label">کد ملی :</label>
+                                <input type="text" class="input-field form-control" value="123456" id="userNationalCode"
+                                    name="userNationalCode" placeholder="کد ملی">
+                            </div>
+                        </div>
+                        <div class="row p-0 m-0 mt-4">
+                            <div class="col-5">
+                                <label for="Gender" class="form-label">جنسیت :</label>
+                                <input type="radio" name="Gender" id="men" class="mx-1" checked> مرد
+                                <input type="radio" name="Gender" id="women" class="mx-1"> زن
+                                <input type="radio" name="Gender" id="nothing" class="mx-1"> بدون انتخاب
+                            </div>
+                        </div>
+                        <div class="row p-0 m-0 mt-4">
+                            <div class="col-3">
+                                <button type="submit" class="btn btn-warning w-100 fw-bold">ویرایش اطلاعات</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <div id="wishListPanel" class="col-9 m-0 p-0 overflow-y-scroll d-none">
+                    <div class="row whishList-items p-0 m-0">
+                        <div class="col-3 px-1">
+                            <div class="p-img position-relative h-100 bg-danger text-center">
+                                تصویر کالا
+                            </div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <div>
+                                لپتاپ ایسر مدل acer nitro 5 an515-55
+                            </div>
+                        </div>
+                        <div class="col-3 row m-0 p-0 text-center">
+                            <div class="text-danger mt-4">
+                                23,000,000 تومان
+                            </div>
+                            <div class="w-100">
+                                <button type="button" class="p-Details mx-auto btn btn-info">مشاهده جزئیات کالا</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="row whishList-items p-0 m-0">
+                        <div class="col-3 px-1">
+                            <div class="p-img position-relative h-100 bg-danger text-center">
+                                تصویر کالا
+                            </div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <div>
+                                لپتاپ ایسر مدل acer nitro 5 an515-55
+                            </div>
+                        </div>
+                        <div class="col-3 row m-0 p-0 text-center">
+                            <div class="text-danger mt-4">
+                                23,000,000 تومان
+                            </div>
+                            <div class="w-100">
+                                <button type="button" class="p-Details mx-auto btn btn-info">مشاهده جزئیات کالا</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="row whishList-items p-0 m-0">
+                        <div class="col-3 px-1">
+                            <div class="p-img position-relative h-100 bg-danger text-center">
+                                تصویر کالا
+                            </div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <div>
+                                لپتاپ ایسر مدل acer nitro 5 an515-55
+                            </div>
+                        </div>
+                        <div class="col-3 row m-0 p-0 text-center">
+                            <div class="text-danger mt-4">
+                                23,000,000 تومان
+                            </div>
+                            <div class="w-100">
+                                <button type="button" class="p-Details mx-auto btn btn-info">مشاهده جزئیات کالا</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="row whishList-items p-0 m-0">
+                        <div class="col-3 px-1">
+                            <div class="p-img position-relative h-100 bg-danger text-center">
+                                تصویر کالا
+                            </div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <div>
+                                لپتاپ ایسر مدل acer nitro 5 an515-55
+                            </div>
+                        </div>
+                        <div class="col-3 row m-0 p-0 text-center">
+                            <div class="text-danger mt-4">
+                                23,000,000 تومان
+                            </div>
+                            <div class="w-100">
+                                <button type="button" class="p-Details mx-auto btn btn-info">مشاهده جزئیات کالا</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="row whishList-items p-0 m-0">
+                        <div class="col-3 px-1">
+                            <div class="p-img position-relative h-100 bg-danger text-center">
+                                تصویر کالا
+                            </div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <div>
+                                لپتاپ ایسر مدل acer nitro 5 an515-55
+                            </div>
+                        </div>
+                        <div class="col-3 row m-0 p-0 text-center">
+                            <div class="text-danger mt-4">
+                                23,000,000 تومان
+                            </div>
+                            <div class="w-100">
+                                <button type="button" class="p-Details mx-auto btn btn-info">مشاهده جزئیات کالا</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="row whishList-items p-0 m-0">
+                        <div class="col-3 px-1">
+                            <div class="p-img position-relative h-100 bg-danger text-center">
+                                تصویر کالا
+                            </div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <div>
+                                لپتاپ ایسر مدل acer nitro 5 an515-55
+                            </div>
+                        </div>
+                        <div class="col-3 row m-0 p-0 text-center">
+                            <div class="text-danger mt-4">
+                                23,000,000 تومان
+                            </div>
+                            <div class="w-100">
+                                <button type="button" class="p-Details mx-auto btn btn-info">مشاهده جزئیات کالا</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="row whishList-items p-0 m-0">
+                        <div class="col-3 px-1">
+                            <div class="p-img position-relative h-100 bg-danger text-center">
+                                تصویر کالا
+                            </div>
+                        </div>
+                        <div class="col-6 py-2">
+                            <div>
+                                لپتاپ ایسر مدل acer nitro 5 an515-55
+                            </div>
+                        </div>
+                        <div class="col-3 row m-0 p-0 text-center">
+                            <div class="text-danger mt-4">
+                                23,000,000 تومان
+                            </div>
+                            <div class="w-100">
+                                <button type="button" class="p-Details mx-auto btn btn-info">مشاهده جزئیات کالا</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <div id="orderList" class="col-9 py-3 overflow-y-scroll d-none">
+                    <div class="orderItems row p-0 m-0">
+                        <div class="p-status mt-2">
+                            <i class="fa fa-check text-success"></i>
+                            وضعیت کالا : تحویل داده شده
+                        </div>
+                        <div class="row product-details">
+                            <div class="col-2">
+                                25 اسفند 1401
+                            </div>|
+                            <div class="col-3">
+                                کد سفارش : 75412587
+                            </div>|
+                            <div class="col">
+                                مبلغ کل : 2,000,000 تومان
+                            </div>
+                        </div>
+                        <div class="row product-imgs">
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس اول
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس دوم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس سوم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس چهارم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس پنجم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس ششم
+                            </div>
+                            <div class="text-center product-imgs-items my-auto mx-1 pt-4">
+                                <span>3 +</span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <a href="#" class="text-info text-decoration-none">
+                                <i class="fa fa-file-invoice mx-1"></i>
+                                <span>مشاهده فاکتور</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="orderItems row p-0 m-0">
+                        <div class="p-status mt-2">
+                            <i class="fa fa-xmark text-danger"></i>
+                            وضعیت کالا : لغو شده
+                        </div>
+                        <div class="row product-details">
+                            <div class="col-2">
+                                21 اسفند 1401
+                            </div>|
+                            <div class="col-3">
+                                کد سفارش : 5432542
+                            </div>|
+                            <div class="col">
+                                مبلغ کل : 500,000 تومان
+                            </div>
+                        </div>
+                        <div class="row product-imgs">
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس اول
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس دوم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس سوم
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <a href="#" class="text-info text-decoration-none">
+                                <i class="fa fa-file-invoice mx-1"></i>
+                                <span>مشاهده فاکتور</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="orderItems row p-0 m-0">
+                        <div class="p-status mt-2">
+                            <i class="fa fa-check text-success"></i>
+                            وضعیت کالا : تحویل داده شده
+                        </div>
+                        <div class="row product-details">
+                            <div class="col-2">
+                                20 بهمن 1401
+                            </div>|
+                            <div class="col-3">
+                                کد سفارش : 34535435
+                            </div>|
+                            <div class="col">
+                                مبلغ کل : 5,000,000 تومان
+                            </div>
+                        </div>
+                        <div class="row product-imgs">
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس اول
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس دوم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس سوم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس چهارم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس پنجم
+                            </div>
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس ششم
+                            </div>
+                            <div class="text-center product-imgs-items my-auto mx-1 pt-4">
+                                <span>8 +</span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <a href="#" class="text-info text-decoration-none">
+                                <i class="fa fa-file-invoice mx-1"></i>
+                                <span>مشاهده فاکتور</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------->
+                    <div class="orderItems row p-0 m-0">
+                        <div class="p-status mt-2">
+                            <i class="fa fa-check text-success"></i>
+                            وضعیت کالا : تحویل داده شده
+                        </div>
+                        <div class="row product-details">
+                            <div class="col-2">
+                                10 آذر 1401
+                            </div>|
+                            <div class="col-3">
+                                کد سفارش : 45234556
+                            </div>|
+                            <div class="col">
+                                مبلغ کل : 300,000 تومان
+                            </div>
+                        </div>
+                        <div class="row product-imgs">
+                            <div class="bg-info text-center product-imgs-items my-auto mx-1">
+                                عکس اول
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <a href="#" class="text-info text-decoration-none">
+                                <i class="fa fa-file-invoice mx-1"></i>
+                                <span>مشاهده فاکتور</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <!--------------------------------------------------------------------------------------------------->
+                <div id="locationLists" class="col-9 py-3 overflow-y-scroll">
+                    <div class="addNewLocation w-100 text-right">
+                        <a href="#" class="btn btn-outline-success fw-bold">
+                            <i class="fa fa-plus mx-1"></i>
+                            <span>ثبت آدرس جدید</span>
+                        </a>
+                    </div>
+                    <div class="locationsList mt-3">
+                        <a href="#" class="position-absolute locationMore-icon text-black text-decoration-none">
+                            <i class="fa fa-ellipsis-v"></i>
+                            <div>
+                                <div class="locationMore-btn btn btn-outline-secondary d-block">ویرایش</div>
+                                <div class="locationMore-btn btn btn-outline-danger d-block">حذف</div>
+                            </div>
+                        </a>
+                        <p>بندرانزلی, خیابان میرزاکوچک خان, پشت آژانس فجر</p>
+                        <p><i class="fa fa-building"></i> بندرانزلی</p>
+                        <p><i class="fa-regular fa-envelope"></i> کد پستی : 4313757143</p>
+                        <p><i class="fa fa-mobile"></i> 09378149896</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <script src="../Js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../Js/bootstrap.min.js"></script>
+    <script src="../Js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

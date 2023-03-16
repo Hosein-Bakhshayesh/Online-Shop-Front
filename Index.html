@@ -11,185 +11,6 @@
   <script src="Js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style/bootstrap-rtl.min.css">
   <link rel="stylesheet" href="style/style.css">
-  <style>
-    .dropdown-menu {
-      right: -150px !important;
-    }
-
-    .dropdown-item {
-      width: 220px;
-      height: 55px;
-    }
-
-    .dropdown-item:active {
-      color: black;
-      background-color: #e9ecef;
-    }
-
-    .slider {
-      height: 500px;
-      margin-top: 100px !important;
-    }
-
-    .my-nav-style {
-      box-sizing: border-box !important;
-      box-shadow: 5px 7px 7px rgba(187, 187, 187, 0.651);
-      position: fixed;
-      z-index: 10;
-      height: 70px;
-      width: 100%;
-      top: 0 !important;
-    }
-
-    .carousel-item {
-      height: 500px;
-    }
-
-    .test {
-      height: 2000px;
-    }
-
-    .logo-place {
-      font-weight: bold !important;
-    }
-
-    .categories {
-      margin-top: 40px;
-      margin-bottom: 40px;
-      padding: 0 !important;
-    }
-
-    .categories-row {
-      margin: 35px 0px !important;
-    }
-
-    .categories-items {
-      width: 50%;
-      box-sizing: border-box;
-      padding-top: 15px;
-      padding-bottom: 0px;
-      border-radius: 70px;
-      transition-duration: .3s;
-    }
-
-    .categories-items:hover {
-      background-color: #e9ecef;
-    }
-
-    .product-box {
-      height: 300px;
-      border: 1px solid #e9ecef;
-      box-sizing: border-box;
-      box-shadow: 0px 10px 7px #e9ecef;
-      transition-duration: .3s;
-    }
-
-    .product-box:hover {
-      scale: 1.1;
-    }
-
-    .product-title {
-      transition-duration: .3s;
-      font-family: YekanWeb !important;
-      font-weight: 700 !important;
-      font-size: 16px !important;
-      line-height: 1.3rem !important;
-      text-align: justify !important;
-    }
-
-    .product-title:hover {
-      color: rgb(0, 89, 161) !important;
-    }
-
-    .off-items {
-      height: 250px;
-      border-radius: 20px;
-    }
-
-    .footer {
-      height: 300px;
-      background-color: #eee;
-    }
-
-    .footer-item {
-      transition-duration: .3s;
-      color: gray !important;
-    }
-
-    .footer-item:hover {
-      color: black !important;
-    }
-
-    #off-email:focus {
-      border-color: #e9ecef !important;
-      box-shadow: 0 0 2px 0.1rem gray !important;
-    }
-
-    /* Dropdown Button */
-    .dropbtn {
-      background-color: #04AA6D;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-    }
-
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    /* Links inside the dropdown */
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {
-      background-color: #e9ecef;
-    }
-
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content-digital{
-      display: none;
-      position: absolute;
-      background-color: #d8d5d5;
-      min-width: 200px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 2;
-      margin-right: 6rem !important;
-    }
-    .dropdown-content-digital a{
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    .dropdown-content-digital a:hover {
-      background-color: #e9ecef;
-    }
-    .myDropdown-items-digital:hover .dropdown-content-digital{
-      display: block !important;
-    }
-  </style>
 </head>
 
 <body class="rtl">
@@ -217,7 +38,7 @@
                 <a href="#" class="myDropdown-items-cloth">مد و پوشاک</a>
                 <a href="#" class="myDropdown-items-book">کتاب و نوشت افزار</a>
               </div>
-              
+
             </div>
           </li>
           <li class="nav-item mx-4">
@@ -660,22 +481,22 @@
           <div class="row my-4">
             <div class="col-3 text-center">
               <a href="#" class="footer-item text-dark text-decoration-none">
-                <i class="fa fa-2x fa-instagram"></i>
+                <i id="instagram" class="fa fa-2x fa-instagram"></i>
               </a>
             </div>
             <div class="col-3 text-center">
               <a href="#" class="footer-item text-dark text-decoration-none">
-                <i class="fa fa-2x fa-telegram"></i>
+                <i id="telegram" class="fa fa-2x fa-telegram"></i>
               </a>
             </div>
             <div class="col-3 text-center">
               <a href="#" class="footer-item text-dark text-decoration-none">
-                <i class="fa fa-2x fa-facebook"></i>
+                <i id="facebook" class="fa fa-2x fa-facebook"></i>
               </a>
             </div>
             <div class="col-3 text-center">
               <a href="#" class="footer-item text-dark text-decoration-none">
-                <i class="fa fa-2x fa-linkedin"></i>
+                <i id="linkedin" class="fa fa-2x fa-linkedin"></i>
               </a>
             </div>
           </div>

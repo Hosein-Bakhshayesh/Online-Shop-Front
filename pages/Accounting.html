@@ -9,151 +9,7 @@
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/69332f68da.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/bootstrap-rtl.min.css">
-    <style>
-        font-face {
-            font-family: VazirWeb;
-            font-style: normal;
-            font-weight: bold;
-            src: url('fonts/eot/Vazir-Bold.eot');
-            src: url('fonts/eot/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
-                /* IE6-8 */
-                url('fonts/woff2/Vazir-Bold.woff2') format('woff2'),
-                /* FF39+,Chrome36+, Opera24+*/
-                url('fonts/woff/Vazir-Bold.woff') format('woff'),
-                /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-                url('fonts/ttf/Vazir-Bold.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: VazirWeb;
-            font-style: normal;
-            font-weight: lighter;
-            src: url('fonts/eot/Vazir-Light.eot');
-            src: url('fonts/eot/Vazir-Light.eot?#iefix') format('embedded-opentype'),
-                /* IE6-8 */
-                url('fonts/woff2/Vazir-Light.woff2') format('woff2'),
-                /* FF39+,Chrome36+, Opera24+*/
-                url('fonts/woff/Vazir-Light.woff') format('woff'),
-                /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-                url('fonts/ttf/Vazir-Light.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: VazirWeb;
-            font-style: normal;
-            font-weight: normal;
-            src: url('fonts/eot/Vazir.eot');
-            src: url('fonts/eot/Vazir.eot?#iefix') format('embedded-opentype'),
-                /* IE6-8 */
-                url('fonts/woff2/Vazir.woff2') format('woff2'),
-                /* FF39+,Chrome36+, Opera24+*/
-                url('fonts/woff/Vazir.woff') format('woff'),
-                /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-                url('fonts/ttf/Vazir.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: YekanWeb;
-            src: url('fonts/eot/Yekan.eot');
-            src: url('fonts/woff/Yekan.woff') format('woff'),
-                /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-                url('fonts/ttf/Yekan.ttf') format('truetype');
-        }
-
-        body {
-            font-family: VazirWeb;
-            font-weight: bold;
-            font-size: large;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .main-box {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-image: url(../Images/back3.jpg);
-            background-position: center;
-            background-size: cover;
-        }
-
-        .form-box {
-            width: 380px;
-            height: 550px;
-            position: relative;
-            background-color: white;
-            margin: 8% auto;
-            padding: 0.3rem;
-        }
-
-        .btn-box {
-            width: 220px;
-            margin: 2.2rem auto;
-            position: relative;
-            border-radius: 1.8rem;
-            font-size: 1rem;
-            box-shadow: 5px 7px 7px rgba(187, 187, 187, 0.651);
-        }
-
-        .toggle-btn {
-            position: relative;
-            background: transparent;
-            border: 0;
-            outline: none;
-            cursor: pointer;
-        }
-
-        #btn-active {
-            left: 0;
-            width: 110px;
-            border-radius: 1.8rem;
-            transition: .6s;
-        }
-
-        .social-icons {
-            width: 150px;
-        }
-
-        #instagram:hover {
-            color: red;
-        }
-
-        #telegram:hover {
-            color: rgb(0, 89, 255);
-        }
-
-        #facebook:hover {
-            color: blue
-        }
-
-        #linkedin:hover {
-            color: rgb(0, 180, 180);
-        }
-
-        .input-group {
-            width: 250px;
-        }
-
-        .input-field {
-            border-bottom: 2px solid black !important;
-        }
-
-        .input-field:focus {
-            outline: 0 !important;
-            box-shadow: none !important;
-        }
-
-        #login {
-            display: block;
-        }
-
-        #register {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="../style/AccountingPage.css">
 </head>
 
 <body class="rtl">
@@ -178,7 +34,7 @@
                     <i id="linkedin" class="fa fa-2x fa-linkedin"></i>
                 </a>
             </div>
-            <form action="" id="login" class="input-group m-auto">
+            <form action="" id="login" class="input-group m-auto" method="post">
                 <input type="text" name="userName" id="userName" class="input-field form-control w-100 my-2 border-0"
                     placeholder="نام کاربری">
                 <input type="password" name="password" id="password"
@@ -186,7 +42,7 @@
                 <input type="checkbox" name="remember" id="remember" class="checkbox-R mt-3"><span class="mt-3 ml-2">مرا به خاطر بسپار</span>
                 <button type="submit" class="btn btn-success w-100 mt-4">ورود</button>
             </form>
-            <form action="" id="register" class="input-group m-auto">
+            <form action="" id="register" class="input-group m-auto" method="post">
                 <input type="text" name="emailRegister" id="emailRegister"
                     class="input-field form-control w-100 my-2 border-0" placeholder="ایمیل">
                 <input type="text" name="userNameRegister" id="userNameRegister"
