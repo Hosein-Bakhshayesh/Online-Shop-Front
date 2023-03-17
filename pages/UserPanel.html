@@ -10,123 +10,7 @@
     <script src="https://kit.fontawesome.com/69332f68da.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/bootstrap-rtl.min.css">
     <link rel="stylesheet" href="../style/style.css">
-    <style>
-        .mainBox {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-        }
-
-        .panelBox {
-            position: relative;
-            margin: 100px auto;
-            width: 1000px;
-            height: 600px;
-            box-shadow: 0px 0px 10px rgba(187, 187, 187, 0.651);
-        }
-
-        .menu-title {
-            width: 100%;
-            height: 60px;
-
-        }
-
-        .menu-button {
-            background-color: transparent;
-            border: 1px solid rgba(187, 187, 187, 0.651);
-            outline: none;
-            direction: rtl;
-        }
-
-        .menu-button i {
-            font-size: 1.7rem;
-        }
-
-        .button-active {
-            width: 100%;
-            height: 60px;
-        }
-
-        .form-label {
-            font-size: 1rem;
-            color: rgb(100, 100, 100);
-        }
-
-        .input-field:focus {
-            outline: 0;
-            border: 1px solid #17a2b8;
-            box-shadow: 0 0 2px 0.1rem #17a2b8;
-        }
-
-        #wishListPanel {
-            height: 600px;
-        }
-
-        .whishList-items {
-            width: 100%;
-            height: 120px;
-            border-top: 1px solid rgba(187, 187, 187, 0.651);
-            border-bottom: 1px solid rgba(187, 187, 187, 0.651);
-        }
-
-        .p-Details {
-            margin-bottom: 15px !important;
-        }
-
-        #orderList {
-            height: 600px;
-        }
-
-        .orderItems {
-            height: 220px;
-            width: 100%;
-            border: 1px solid rgb(121, 121, 121);
-            border-radius: 10px;
-            margin-top: 5px !important;
-        }
-
-        .orderItems {
-            font-size: 1rem;
-        }
-
-        .product-details {
-            color: rgb(121, 121, 121);
-            font-size: .9rem !important;
-        }
-
-        .product-imgs {
-            height: 100px;
-            border: 1px solid rgb(121, 121, 121);
-            border-right: 0;
-            border-left: 0;
-            margin: .03rem;
-        }
-
-        .product-imgs-items {
-            width: 80px;
-            height: 80px;
-        }
-
-        #locationLists {
-            height: 600px;
-        }
-
-        .locationsList {
-            font-size: .9rem;
-            color: rgb(121, 121, 121);
-            border-bottom: 1px solid rgba(187, 187, 187, 0.651);
-        }
-
-        .locationMore-icon {
-            left: 1rem;
-            
-        }
-        .locationMore-dropdown{
-            width: 100px;
-            height: 50px;
-            border: 1px solid rgba(187, 187, 187, 0.651);
-        }
-    </style>
+    <link rel="stylesheet" href="../style/UserPanelPage.css">
 </head>
 
 <body class="rtl">
@@ -190,44 +74,45 @@
             </div>
         </div>
     </nav>
-
+    <!--------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------->
     <div class="mainBox">
         <div class="panelBox">
             <div class="position-relative row p-0 m-0">
                 <div class="col-3 h-100 menu-right p-0 m-0 position-relative">
-                    <div class="menu-title bg-info">
-                        <div class="position-absolute button-active"></div>
+                    <div class="menu-title">
+                        <div id="button-active" class="position-absolute border-info w-100"></div>
                         <button type="button"
-                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0"
+                            onclick="openUserPanel();">
                             <i class="fa fa-user-circle col-1 ml-2"></i>
                             <span class="mx-2 col text-left">مشخصات کاربری</span>
                         </button>
                         <button type="button"
-                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0"
+                            onclick="openWishPanel();">
                             <i class="fa-regular fa-heart col-1 ml-2"></i>
                             <span class="mx-2 col text-left">لیست علاقه‌مندی‌ها</span>
                         </button>
                         <button type="button"
-                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0"
+                            onclick="openOrderPanel();">
                             <i class="fa-solid fa-bag-shopping col-1 ml-2"></i>
                             <span class="mx-2 col text-left">سفارشات</span>
                         </button>
                         <button type="button"
-                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
+                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0"
+                            onclick="openLocationPanel();">
                             <i class="fa fa-location-dot col-1 ml-2"></i>
                             <span class="mx-2 col text-left">آدرس‌ها</span>
-                        </button>
-                        <button type="button"
-                            class="w-100 h-100 menu-button border-right-0 border-left-0 row d-flex align-items-center m-0">
-                            <i class="fa-regular fa-credit-card col-1 "></i>
-                            <span class="mx-2 col text-left">کدهای‌ تخفیف</span>
                         </button>
                     </div>
                 </div>
                 <!--------------------------------------------------------------------------------------------------->
                 <!--------------------------------------------------------------------------------------------------->
                 <!--------------------------------------------------------------------------------------------------->
-                <div id="userInfoPanel" class="col-9 h-100 py-3 d-none">
+                <div id="userInfoPanel" class="col-9 h-100 py-3">
                     <form action="#" class="form-group p-2" method="post">
                         <div class="row p-0 m-0">
                             <div class="col-6">
@@ -273,7 +158,7 @@
                             </div>
                         </div>
                         <div class="row p-0 m-0 mt-4">
-                            <div class="col-5">
+                            <div class="col">
                                 <label for="Gender" class="form-label">جنسیت :</label>
                                 <input type="radio" name="Gender" id="men" class="mx-1" checked> مرد
                                 <input type="radio" name="Gender" id="women" class="mx-1"> زن
@@ -290,7 +175,7 @@
                 <!--------------------------------------------------------------------------------------------------->
                 <!--------------------------------------------------------------------------------------------------->
                 <!--------------------------------------------------------------------------------------------------->
-                <div id="wishListPanel" class="col-9 m-0 p-0 overflow-y-scroll d-none">
+                <div id="wishListPanel" class="col-9 m-0 p-0 overflow-y-scroll">
                     <div class="row whishList-items p-0 m-0">
                         <div class="col-3 px-1">
                             <div class="p-img position-relative h-100 bg-danger text-center">
@@ -441,17 +326,17 @@
                 <!--------------------------------------------------------------------------------------------------->
                 <!--------------------------------------------------------------------------------------------------->
                 <!--------------------------------------------------------------------------------------------------->
-                <div id="orderList" class="col-9 py-3 overflow-y-scroll d-none">
-                    <div class="orderItems row p-0 m-0">
+                <div id="orderList" class="col-9 py-3 overflow-y-scroll">
+                    <div class="orderItems row p-0 mx-0 mb-3">
                         <div class="p-status mt-2">
                             <i class="fa fa-check text-success"></i>
                             وضعیت کالا : تحویل داده شده
                         </div>
                         <div class="row product-details">
-                            <div class="col-2">
+                            <div class="col-3">
                                 25 اسفند 1401
                             </div>|
-                            <div class="col-3">
+                            <div class="col-4">
                                 کد سفارش : 75412587
                             </div>|
                             <div class="col">
@@ -489,16 +374,16 @@
                         </div>
                     </div>
                     <!--------------------------------------------------------------------------------------------------->
-                    <div class="orderItems row p-0 m-0">
+                    <div class="orderItems row p-0 mx-0 mb-3">
                         <div class="p-status mt-2">
                             <i class="fa fa-xmark text-danger"></i>
                             وضعیت کالا : لغو شده
                         </div>
                         <div class="row product-details">
-                            <div class="col-2">
+                            <div class="col-3">
                                 21 اسفند 1401
                             </div>|
-                            <div class="col-3">
+                            <div class="col-4">
                                 کد سفارش : 5432542
                             </div>|
                             <div class="col">
@@ -524,16 +409,16 @@
                         </div>
                     </div>
                     <!--------------------------------------------------------------------------------------------------->
-                    <div class="orderItems row p-0 m-0">
+                    <div class="orderItems row p-0 mx-0 mb-3">
                         <div class="p-status mt-2">
                             <i class="fa fa-check text-success"></i>
                             وضعیت کالا : تحویل داده شده
                         </div>
                         <div class="row product-details">
-                            <div class="col-2">
+                            <div class="col-3">
                                 20 بهمن 1401
                             </div>|
-                            <div class="col-3">
+                            <div class="col-4">
                                 کد سفارش : 34535435
                             </div>|
                             <div class="col">
@@ -571,16 +456,16 @@
                         </div>
                     </div>
                     <!--------------------------------------------------------------------------------------------------->
-                    <div class="orderItems row p-0 m-0">
+                    <div class="orderItems row p-0 mx-0 mb-3">
                         <div class="p-status mt-2">
                             <i class="fa fa-check text-success"></i>
                             وضعیت کالا : تحویل داده شده
                         </div>
                         <div class="row product-details">
-                            <div class="col-2">
+                            <div class="col-3">
                                 10 آذر 1401
                             </div>|
-                            <div class="col-3">
+                            <div class="col-4">
                                 کد سفارش : 45234556
                             </div>|
                             <div class="col">
@@ -605,32 +490,125 @@
                 <!--------------------------------------------------------------------------------------------------->
                 <div id="locationLists" class="col-9 py-3 overflow-y-scroll">
                     <div class="addNewLocation w-100 text-right">
-                        <a href="#" class="btn btn-outline-success fw-bold">
+                        <a href="#" class="btn btn-outline-success fw-bold" data-toggle="modal" data-target="#myModal">
                             <i class="fa fa-plus mx-1"></i>
                             <span>ثبت آدرس جدید</span>
                         </a>
                     </div>
-                    <div class="locationsList mt-3">
-                        <a href="#" class="position-absolute locationMore-icon text-black text-decoration-none">
-                            <i class="fa fa-ellipsis-v"></i>
-                            <div>
-                                <div class="locationMore-btn btn btn-outline-secondary d-block">ویرایش</div>
-                                <div class="locationMore-btn btn btn-outline-danger d-block">حذف</div>
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">ثبت آدرس جدید</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" method="post" class="form-box p-3">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="stateName" class="form-label">استان <span
+                                                        class="text-danger">*</span> :</label>
+                                                <input type="text" class="form-control input-field" id="stateName"
+                                                    name="stateName" placeholder="استان">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="cityName" class="form-label">شهر <span
+                                                        class="text-danger">*</span> :</label>
+                                                <input type="text" class="form-control input-field" id="cityName"
+                                                    name="cityName" placeholder="شهر">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="streetName" class="form-label">آدرس پستی <span
+                                                        class="text-danger">*</span> : </label>
+                                                <textarea class="form-control input-field" name="streetName"
+                                                    id="streetName" cols="30" rows="10"
+                                                    placeholder="آدرس پستی کامل : کوچه، محل، ساختمان........"></textarea>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label for="pelakNumber" class="form-label">پلاک <span
+                                                        class="text-danger">*</span> :</label>
+                                                <input type="text" class="form-control input-field" id="pelakNumber"
+                                                    name="pelakNumber" placeholder="پلاک">
+                                            </div>
+                                            <div class="col-2">
+                                                <label for="vahedNumber" class="form-label">واحد :</label>
+                                                <input type="text" class="form-control input-field" id="vahedNumber"
+                                                    name="vahedNumber" placeholder="واحد">
+                                            </div>
+                                            <div class="col">
+                                                <label for="postalCodeNumber" class="form-label">کد پستی <span
+                                                        class="text-danger">*</span> :</label>
+                                                <input type="text" class="form-control input-field"
+                                                    id="postalCodeNumber" name="postalCodeNumber" placeholder="کد پستی">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="recipientFName" class="form-label">نام گیرنده <span
+                                                        class="text-danger">*</span> :</label>
+                                                <input type="text" class="form-control input-field" id="recipientFName"
+                                                    name="recipientFName" placeholder="نام گبرنده">
+                                            </div>
+                                            <div class="col-4">
+                                                <label for="recipientLName" class="form-label">نام خانوادگی گیرنده <span
+                                                        class="text-danger">*</span>
+                                                    :</label>
+                                                <input type="text" class="form-control input-field" id="recipientLName"
+                                                    name="recipientLName" placeholder="نام خانوادگی گیرنده">
+                                            </div>
+                                            <div class="col-4">
+                                                <label for="recipientMobile" class="form-label">شماره موبایل گیرنده
+                                                    <span class="text-danger fw-light">*</span>
+                                                    :</label>
+                                                <input type="text" class="form-control input-field" id="recipientMobile"
+                                                    name="recipientMobile" placeholder="شماره موبایل گیرنده">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <hr>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger fw-bold"
+                                        data-dismiss="modal">بستن</button>
+                                    <button type="button" class="btn btn-outline-success fw-bold"
+                                        data-dismiss="modal">ذخیره</button>
+                                </div>
                             </div>
-                        </a>
+                        </div>
+                    </div>
+                    <div class="locationsList mt-3">
+                        <p>حسین بخشایش مقرب</p>
                         <p>بندرانزلی, خیابان میرزاکوچک خان, پشت آژانس فجر</p>
-                        <p><i class="fa fa-building"></i> بندرانزلی</p>
-                        <p><i class="fa-regular fa-envelope"></i> کد پستی : 4313757143</p>
-                        <p><i class="fa fa-mobile"></i> 09378149896</p>
+                        <div class="row">
+                            <p class="col-4"><i class="fa fa-building"></i> شهر : بندرانزلی</p>
+                            |
+                            <p class="col"><i class="fa-regular fa-envelope"></i> کد پستی : 4313757143</p>
+                        </div>
+                        <div class="row p-0">
+                            <p class="col"><i class="fa fa-mobile"></i> موبایل : 09378149896</p>
+                            <div class="location-buttons col-3 mb-3 d-flex">
+                                <button class="fw-bold btn btn-warning w-50 mx-1"> ویرایش</button>
+                                <button class="fw-bold btn btn-danger w-50 mx-1">حذف</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    
 
 
+    <script src="../Js/UserPanel.js"></script>
     <script src="../Js/jquery-3.2.1.slim.min.js"></script>
     <script src="../Js/bootstrap.min.js"></script>
     <script src="../Js/bootstrap.bundle.min.js"></script>
