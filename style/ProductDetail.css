@@ -1,0 +1,262 @@
+@font-face {
+	font-family: 'TanhaWeb';
+	src: url("../fonts/Tanha/Tanha-FD.ttf") format('truerype');
+	src: url("../fonts/Tanha/Tanha-FD.woff") format('woff');
+	src: url("../fonts/Tanha/Tanha-FD.woff2") format('woff2');
+}
+
+@font-face {
+	font-family: 'yekanWeb';
+	src: url("../fonts/Yekan/Yekan.ttf") format('truerype');
+	src: url("../fonts/Yekan/Yekan.woff") format('woff');
+}
+
+body {
+	font-family: 'TanhaWeb';
+	font-size: medium;
+}
+
+.dropdown-menu {
+	right: -150px !important;
+}
+
+.dropdown-item {
+	width: 220px;
+	height: 55px;
+}
+
+.dropdown-item:active {
+	color: black;
+	background-color: #e9ecef;
+}
+
+.my-nav-style {
+	box-sizing: border-box !important;
+	box-shadow: 5px 7px 7px rgba(187, 187, 187, 0.651);
+	position: fixed;
+	z-index: 10;
+	height: 70px;
+	width: 100%;
+	top: 0 !important;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+	background-color: #04AA6D;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #e9ecef;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content-digital {
+	display: none;
+	position: absolute;
+	background-color: #d8d5d5;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+	margin-right: 6rem !important;
+}
+
+.dropdown-content-digital a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content-digital a:hover {
+	background-color: #e9ecef;
+}
+
+.myDropdown-items-digital:hover .dropdown-content-digital {
+	display: block !important;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+.product-interface {
+	height: 650px;
+	margin-top: 100px !important;
+
+}
+
+.product-img {
+	height: 450px;
+	margin: auto;
+}
+
+.product-another-imgs {
+	margin: auto;
+}
+
+.product-imgs {
+	height: 110px;
+}
+
+.product-imgs div {
+	cursor: pointer;
+}
+
+.font-size-small {
+	font-size: small;
+}
+
+.line {
+	height: 2px;
+}
+
+.detail-preview {
+	line-height: 1.6rem;
+	text-align: justify;
+}
+
+.add-cart {
+	height: 430px;
+}
+
+.add-cart-box {
+	width: 300px;
+	background: linear-gradient(0deg, hsla(240, 3%, 94%, .5), hsla(240, 3%, 94%, .5)), #fff;
+	border: 1px solid rgb(219, 219, 219);
+	border-radius: 20px;
+	position: relative;
+	top: 25%;
+}
+
+.price {
+	text-align: end;
+}
+
+.product-detail-text {
+	line-height: 1.8rem;
+}
+
+.product-detail {
+	box-shadow: 1px 0px 5px rgba(187, 187, 187, 0.651);
+	border: 1px solid rgb(219, 219, 219);
+	border-radius: 20px;
+	padding: 30px;
+}
+
+.myhr {
+	margin-top: .8rem;
+	margin-bottom: .8rem;
+	border-top: 1px solid rgba(0, 0, 0, .3) !important;
+}
+
+.myCommenthr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border-top: 1px solid rgba(0, 0, 0) !important;
+}
+
+#show-more-technical {
+	transition-duration: .4s;
+}
+
+#show-more-technical-btn {
+	width: 150px;
+}
+
+#show-more-technical-btn:focus,
+#show-more-comments-btn:focus {
+	box-shadow: none !important;
+	border: none !important;
+}
+
+.comment-inputs:focus {
+	box-shadow: 0 0 1px 0.1rem #17a2b8;
+}
+
+.comment-box {
+	box-shadow: 0px 0px 2px rgba(187, 187, 187, 0.651);
+	border: 1px solid rgb(219, 219, 219);
+	padding: .7rem;
+}
+
+#show-more-comments-btn {
+	width: 170px;
+}
+
+.likeThisProduct {
+	height: 250px;
+}
+
+.likeProductImgs {
+	margin: auto;
+	height: 75%;
+}
+
+#instagram:hover {
+	color: red;
+}
+
+#telegram:hover {
+	color: rgb(0, 89, 255);
+}
+
+#facebook:hover {
+	color: blue
+}
+
+#linkedin:hover {
+	color: rgb(0, 180, 180);
+}
+
+.footer {
+	min-height: 300px;
+	background-color: #eee;
+}
+
+.footer-item {
+	transition-duration: .3s;
+	color: gray !important;
+}
+
+.footer-item:hover {
+	color: black !important;
+}
+
+#off-email:focus {
+	border-color: #e9ecef !important;
+	box-shadow: 0 0 2px 0.1rem #17a2b8 !important;
+}
