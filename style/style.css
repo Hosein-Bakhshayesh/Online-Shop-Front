@@ -49,10 +49,6 @@ body {
 	height: 500px;
 }
 
-.test {
-	height: 2000px;
-}
-
 .logo-place {
 	font-weight: bold !important;
 }
@@ -211,4 +207,20 @@ body {
 
 #linkedin:hover {
 	color: rgb(0, 180, 180);
+}
+
+.sliderSideImg{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.product-img{
+	height: 100%;
+}
+
+.off-img{
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
 }
