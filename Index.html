@@ -8,67 +8,252 @@
   <title>صفحه اصلی فروشگاه</title>
   <link rel="stylesheet" href="style/bootstrap.min.css">
   <script src="https://kit.fontawesome.com/69332f68da.js" crossorigin="anonymous"></script>
-  <script src="Js/bootstrap.bundle.min.js"></script>
+  <script src="Js/bootstrap.bunule.min.js"></script>
   <link rel="stylesheet" href="style/bootstrap-rtl.min.css">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/navbarStyle.css">
+  <link rel="stylesheet" href="style/FooterStyle.css">
 </head>
 
 <body class="rtl">
   <header>
+    <div class="bg-primary d-block d-xl-none">
+      <div class="collapse navbar-collapse m-0 p-0" id="colNav">
+        <ul class="navbar-nav text-center p-0">
+          <li class="nav-item my-2">
+            <a class="nav-sm nav-link" href="pages/CategoriesItem.html">
+              <h4 class="m-0 categories-title">کالای دیجیتال</h4>
+            </a>
+          </li>
+          <li class="nav-item my-2">
+            <a class="nav-sm nav-link" href="#">
+              <h4 class="m-0 categories-title">مد و پوشاک</h4>
+            </a>
+          </li>
+          <li class="nav-item my-2">
+            <a class="nav-sm nav-link" href="#">
+              <h4 class="m-0 categories-title">کتاب و لوازم تحریر</h4>
+            </a>
+          </li>
+          <li class="nav-item my-2">
+            <a class="nav-sm nav-link" href="#">
+              <h4 class="m-0 categories-title">زیبایی و سلامت</h4>
+            </a>
+          </li>
+          <li class="nav-item my-2">
+            <a class="nav-sm nav-link" href="#">
+              <h4 class="m-0 categories-title">لوازم خانگی</h4>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm bg-light navbar-light my-nav-style p-0 z-3">
-      <div class="container-fluid row">
+      <div class="container-fluid row m-auto">
         <ul class="navbar-nav col-3">
-          <li class="nav-item bg-dark">
+          <li class="nav-item">
+            <button class="navbar-toggler dropbtn text-white bg-info d-inline d-xl-none" type="button"
+              data-toggle="collapse" data-target="#colNav">
+              <i class="fa fa-list"></i>
+            </button>
             <div class="dropdown">
-              <button class="dropbtn text-white bg-danger">
+              <button class="dropbtn text-white bg-info d-none d-xl-block">
                 <i class="fa fa-list"></i>
               </button>
               <div class="dropdown-content">
-                <a href="#" class="myDropdown-items-digital">کالای دیجیتال
-                  <div class="dropdown-content-digital">
-                    <a href="#">تلفن همراه</a>
-                    <a href="#">لپتاپ</a>
-                    <a href="#">تبلت</a>
-                    <a href="#">کنسول بازی</a>
-                    <a href="#">تلویزیون</a>
+                <div class="w-100 row">
+                  <div class="col-2 mt-1 p-0">
+                    <ul>
+                      <li>
+                        <a href="pages/CategoriesItem.html">
+                          <h4 class="m-0 categories-title">کالای دیجیتال</h4>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">موبایل</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">لپتاپ</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">کنسول بازی</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">تلویزیون</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">بازی کامپیوتری</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">لوازم جانبی</h5>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </a>
-                <a href="#" class="myDropdown-items-house">خانه و آشپزخانه</a>
-                <a href="#" class="myDropdown-items-beauty">زیبایی و سلامت</a>
-                <a href="#" class="myDropdown-items-cloth">مد و پوشاک</a>
-                <a href="#" class="myDropdown-items-book">کتاب و نوشت افزار</a>
-              </div>
+                  <div class="col-2 mt-1 p-0">
+                    <ul>
+                      <li>
+                        <a href="pages/CategoriesItem.html">
+                          <h4 class="m-0 categories-title">مد و پوشاک</h4>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">پوشاک مردانه</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">اکسسوری مردانه</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">پوشاک زنانه</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">اکسسوری زنانه</h5>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2 mt-1 p-0">
+                    <ul>
+                      <li>
+                        <a href="pages/CategoriesItem.html">
+                          <h4 class="m-0 categories-title">کتاب و لوازم تحریر</h4>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">کتاب و مجله</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">لوازم تحریر</h5>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2 mt-1 p-0">
+                    <ul>
+                      <li>
+                        <a href="pages/CategoriesItem.html">
+                          <h4 class="m-0 categories-title">زیبایی و سلامت</h4>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">لوازم آرایشی</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">مراقبت از پوست</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">عطر و ادکلن</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">لوازم بهداشتی</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">مراقبت از مو</h5>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-2 mt-1 p-0">
+                    <ul>
+                      <li>
+                        <a href="pages/CategoriesItem.html">
+                          <h4 class="m-0 categories-title">لوازم خانگی</h4>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">تلویزیون</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">دکوراتیو</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">لوازم برقی</h5>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <h5 class="m-0 categories-subtitle">لوازم آشپزخانه</h5>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
+              </div>
             </div>
           </li>
-          <li class="nav-item mx-4">
-            <a class="nav-link mt-2" href="#">
+          <li class="d-none d-sm-block nav-item mx-4">
+            <a href="#" class="nav-link mt-2" data-toggle="modal" data-target="#searchModal">
               <i class="fa fa-search"></i>
             </a>
           </li>
         </ul>
         <div class="navbar-nav col-6 text-center p-0">
           <p class="m-auto">
-            <a class="text-black text-decoration-none logo-place" href="#">لوگو سایت</a>
+            <a class="m-0 text-black text-decoration-none logo-place" href="Index.html">لوگو سایت</a>
           </p>
         </div>
-        <div class="navbar-nav col-3 d-flex justify-content-end">
-          <a class="nav-link nav-item mr-3 my-auto" href="#">
-            سبد خرید : 0
+        <div class="d-block d-sm-none col d-flex justify-content-end">
+          <a href="pages/UserPanel.html" class="text-black text-decoration-none" title="مشاهده پنل کاربری">
+            <i class="fa-solid fa-2x fa-circle-user"></i>
           </a>
-          <div class="dropdown">
+        </div>
+        <div class="navbar-nav col-3 d-flex justify-content-end">
+          <a href="pages/UserPanel.html" class="d-none d-lg-block nav-link nav-item mr-3 my-auto">
+            سبد خرید <i class="fa fa-shopping-cart"> </i> : <span id="cart-items-count"> 0</span>
+          </a>
+          <div class="dropdown d-none d-sm-block">
             <div class="btn dropdown-toggle border-0" id="dropdownMenuButton" data-toggle="dropdown">
               <i class="fa-solid fa-2x fa-circle-user"></i>
             </div>
             <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
+              <a href="pages/UserPanel.html" class="dropdown-item p-0 d-flex align-items-center border border-bottom">
                 <i class="fa fa-circle-user px-2"></i>مشخصات کاربری
               </a>
-              <a class="dropdown-item p-0 d-flex align-items-center border border-bottom" href="#">
+              <a href="pages/UserPanel.html" class="dropdown-item p-0 d-flex align-items-center border border-bottom">
                 <i class="fa-regular fa-heart px-2"></i>لیست علاقه‌مندی‌ها
               </a>
-              <a class="dropdown-item p-0 d-flex align-items-center" href="#">
+              <a href="pages/UserPanel.html"
+                class="d-block d-lg-none dropdown-item p-0 d-flex align-items-center border border-bottom">
+                <i class="fa fa-shopping-cart px-2"></i>مشاهده سبد خرید
+              </a>
+              <a href="pages/Accounting.html" class="dropdown-item p-0 d-flex align-items-center">
                 <i class="fa-solid fa-arrow-right-from-bracket px-2"></i>خروج از حساب کاربری
               </a>
             </div>
@@ -205,13 +390,13 @@
     <div class="categories-list my-5">
       <div class="row text-center categories-row">
         <div class="col-6 col-sm-3 categories-items">
-          <a href="#" class="m-auto text-black text-decoration-none">
+          <a href="pages/CategoriesItem.html" class="m-auto text-black text-decoration-none">
             <i class="fa fa-laptop fa-2x"></i>
             <p class="my-3">کالای دیجیتال</p>
           </a>
         </div>
         <div class="col-6 col-sm-3 categories-items">
-          <a href="#" class="text-black text-decoration-none">
+          <a href="pages/CategoriesItem.html" class="text-black text-decoration-none">
             <i class="fa fa-mobile fa-2x"></i>
             <p class="my-3">موبایل</p>
           </a>
@@ -238,7 +423,7 @@
           </a>
         </div>
         <div class="col-6 col-sm-3 categories-items">
-          <a href="#" class="text-black text-decoration-none">
+          <a href="pages/CategoriesItem.html" class="text-black text-decoration-none">
             <i class="fa fa-gamepad fa-2x"></i>
             <p class="my-3">کنسول</p>
           </a>
@@ -269,17 +454,17 @@
     <div class="container">
       <div class="mt-2 mb-5">
         <div class="border border-2 border-dark rounded rounded-pill d-inline py-2 px-5">
-          <a href="#" class="text-black text-decoration-none">
+          <a href="pages/CategoriesItem.html" class="text-black text-decoration-none">
             <span class="fw-bold">جدیدترین محصولات</span>
           </a>
         </div>
       </div>
       <div class="row m-auto p-0 justify-content-around">
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/samsung galaxy a73 2022.webp" alt="samsung galaxy a73 2022" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل samsung
               galaxy a73 2022</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -287,10 +472,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/xiaomi note 10 pro max.jpg" alt="xiaomi note 10 pro max" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل شیائومی مدل xiaomi note
               10 pro max</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -298,10 +483,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/samsung galaxy s22 2022.jpg" alt="samsung galaxy s22 2022" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل samsung
               galaxy s22 2022</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -309,10 +494,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/xiaomi mi 12.jpg" alt="xiaomi mi 12" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل شیائومی مدل xiaomi mi
               12</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -320,10 +505,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/iphone 13 pro max.jpg" alt="iphone 13 pro max" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل اپل مدل iphone 13 pro
               max</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -331,10 +516,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/samsung galaxy a53.jpg" alt="samsung galaxy a53" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل samsung
               galaxy a53</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -342,10 +527,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/iphone se 2020.jpg" alt="iphone se 2020" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل اپل مدل iphone se
               2020</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -353,10 +538,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/xiaomi mi 11 pro.jpg" alt="xiaomi mi 11 pro" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل شیائومی مدل xiaomi mi 11
               pro</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -364,10 +549,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/samsung s21 ultra.jpg" alt="samsung s21 ultra" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل samsung s21
               ultra</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -375,10 +560,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/xiaomi poco x3 pro.png" alt="xiaomi poco x3 pro" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل شیائومی مدل xiaomi poco
               x3 pro</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -412,17 +597,17 @@
 
       <div class="mt-5 mb-5">
         <div class="border border-2 border-dark rounded rounded-pill d-inline py-2 px-5">
-          <a href="#" class="text-black text-decoration-none">
+          <a href="pages/CategoriesItem.html" class="text-black text-decoration-none">
             <span class="fw-bold">محصولات پرفروش</span>
           </a>
         </div>
       </div>
       <div class="row m-auto p-0 justify-content-around">
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/samsung galaxy a73 2022.webp" alt="samsung galaxy a73 2022" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل samsung
               galaxy a73 2022</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -430,10 +615,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/xiaomi note 10 pro max.jpg" alt="xiaomi note 10 pro max" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل شیائومی مدل xiaomi note
               10 pro max</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -441,10 +626,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/samsung galaxy s22 2022.jpg" alt="samsung galaxy s22 2022" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل samsung
               galaxy s22 2022</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -452,10 +637,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/xiaomi mi 12.jpg" alt="xiaomi mi 12" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل شیائومی مدل xiaomi mi
               12</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -463,10 +648,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/iphone 13 pro max.jpg" alt="iphone 13 pro max" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل اپل مدل iphone 13 pro
               max</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -474,10 +659,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/samsung galaxy a53.jpg" alt="samsung galaxy a53" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل samsung
               galaxy a53</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -485,10 +670,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/iphone se 2020.jpg" alt="iphone se 2020" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل اپل مدل iphone se
               2020</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -496,10 +681,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/xiaomi mi 11 pro.jpg" alt="xiaomi mi 11 pro" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل شیائومی مدل xiaomi mi 11
               pro</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -507,10 +692,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/samsung s21 ultra.jpg" alt="samsung s21 ultra" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل سامسونگ مدل samsung s21
               ultra</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -518,10 +703,10 @@
           </div>
         </div>
         <div class="col-12 col-sm-5 col-lg-2 product-box p-0 mx-2 my-2">
-          <a href="#" class="text-center h-50 bg-white d-block text-black text-decoration-none">
+          <a href="pages/ProductDetail.html" class="text-center h-50 bg-white d-block text-black text-decoration-none">
             <img src="Images/xiaomi poco x3 pro.png" alt="xiaomi poco x3 pro" class="product-img">
           </a>
-          <div class="w-100 text-center mt-2 h-25"><a href="#"
+          <div class="w-100 text-center mt-2 h-25"><a href="pages/ProductDetail.html"
               class="product-title mt-2 fw-lighter text-black text-decoration-none">گوشی موبایل شیائومی مدل xiaomi poco
               x3 pro</a></div>
           <div class=" justify-content-center align-items-end pb-4 h-25 d-flex text-danger">
@@ -532,10 +717,14 @@
     </div>
   </main>
 
+  <!--------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------->
+
   <footer class="footer">
     <div class="container mt-5">
       <div class="m-auto row">
-        <div class="col-3 h-100 mt-5">
+        <div class="col-12 col-md-6 col-lg-3 h-100 mt-5">
           <a href="#" class="text-dark text-decoration-none fw-bolder d-block mb-3">سایت فروشگاه من</a>
           <ul>
             <li class="text-black-50 footer-item my-1">
@@ -549,7 +738,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-4 h-100 mt-5">
+        <div class="col-12 col-md-6 col-lg-4 h-100 mt-5">
           <a href="#" class="text-dark text-decoration-none fw-bolder d-block mb-3">خدمات مشتریان</a>
           <ul>
             <li class="text-black-50 footer-item my-1">
@@ -572,7 +761,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-5 mt-5">
+        <div class="col-12 col-lg-5 mt-5">
           <p class="fw-bolder d-block mb-3">ما را در فضای مجازی دنبال کنید :</p>
           <div class="row my-4">
             <div class="col-3 text-center">
@@ -604,11 +793,38 @@
               ثبت
             </button>
           </form>
-
+          <br>
+          <br>
+          <br>
         </div>
       </div>
     </div>
   </footer>
+
+  <!--------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------->
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div id="modal-bode-search" class="modal-content">
+        
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="search" class="form-control" placeholder="جست و جو کالا..." id="searchBar">
+            <div class="input-group-prepend">
+              <button type="button" id="searchBtn" class="btn btn-danger"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------->
 
   <script src="Js/jquery-3.2.1.slim.min.js"></script>
   <script src="Js/bootstrap.min.js"></script>

@@ -30,7 +30,7 @@
 
 }
 
-#button-active{
+#button-active {
     top: 0;
     height: 60px;
     transition-duration: .5s;
@@ -110,7 +110,7 @@
 }
 
 .product-imgs-items {
-    width: 80px;
+    width: 100px;
     height: 80px;
 }
 
@@ -125,5 +125,16 @@
 }
 
 .location-buttons {
+    width: 100%;
+}
+
+.p-imgs {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.orders-img {
+    height: 100%;
     width: 100%;
 }

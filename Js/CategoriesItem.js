@@ -29,3 +29,37 @@ function LastRangeChange() {
         lastRangeValue.innerText = last.substring(0, last.length)
     }
 }
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+var firstRangeValueSM = document.getElementById("FirstrangevalSM");
+var lastRangeValueSM = document.getElementById("LastrangevalSM");
+
+var firstSM;
+var lastSM = [0, 0, 0];
+function FirstRangeChangeSM() {
+    firstSM = firstRangeValueSM.innerText.toString();
+    if (firstSM.length > 6) {
+        firstRangeValueSM.innerText = firstSM.substring(0, firstSM.length - 6) + ',' + firstSM.substring(firstSM.length - 6, firstSM.length - 3) + ',' + firstSM.substring(firstSM.length - 3, firstSM.length);
+    }
+    else if (firstSM.length > 3) {
+        firstRangeValueSM.innerText = firstSM.substring(0, firstSM.length - 3) + ',' + firstSM.substring(firstSM.length - 3, firstSM.length)
+    }
+    else {
+        firstRangeValueSM.innerText = firstSM.substring(0, firstSM.length)
+    }
+}
+
+function LastRangeChangeSM() {
+
+    lastSM = lastRangeValueSM.innerText.toString();
+    if (lastSM.length > 6) {
+        lastRangeValueSM.innerText = lastSM.substring(0, lastSM.length - 6) + ',' + lastSM.substring(lastSM.length - 6, lastSM.length - 3) + ',' + lastSM.substring(lastSM.length - 3, lastSM.length);
+    }
+    else if (lastSM.length > 3) {
+        lastRangeValueSM.innerText = lastSM.substring(0, lastSM.length - 3) + ',' + lastSM.substring(lastSM.length - 3, lastSM.length)
+    }
+    else {
+        lastRangeValueSM.innerText = lastSM.substring(0, lastSM.length)
+    }
+}

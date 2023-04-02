@@ -1,10 +1,3 @@
-var activeImg = document.getElementById("active-img");
-
-function ChangeActiveImg (object)
-{
-    activeImg.className = object.className+' product-img w-75';
-    activeImg.classList.remove('h-100');
-}
 ////////////////////////////////////////////////////////////////////////
 
 var showMoreTechnical = document.getElementById("show-more-technical");
